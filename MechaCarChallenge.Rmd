@@ -31,9 +31,8 @@ data2 <- read.csv("Suspension_Coil.csv", header = TRUE, stringsAsFactors = F)
   
 ```
 ```{r}
-head(data2,4)
+total_summary <- data2 %>% summarise(Mean = mean(PSI), Median = median(PSI), Variance = var(PSI), SD = sd(PSI))
 
-total_summary <- summary(data2$PSI)
 total_summary
 ```
 ```{r}
