@@ -44,7 +44,7 @@ total_summary
 
 ```
 ```{r}
-#Challenge 3
+#Deliverable 3
 Lot1 <- data2 %>% filter(Manufacturing_Lot=="Lot1") #select only data points where the lot is 1
 Lot2 <- data2 %>% filter(Manufacturing_Lot=="Lot2") #select only data points where the lot is 2
 Lot3 <- data2 %>% filter(Manufacturing_Lot=="Lot3") #select only data points where the lot is 3
