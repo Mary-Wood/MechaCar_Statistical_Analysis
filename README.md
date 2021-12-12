@@ -9,7 +9,11 @@ The slope of the linear model , shows an adjusted R^2 (being used as this model 
 In general, this model of MechaCar prototypes not predict mpg, although it is clear that length, and clearance are the most predictive variables. The variables of spoiler, AWD, weight r values are not less than .05 and as such would not be considered statitically predictive of mpg. 
 
 ## Summary Statistics on Suspension Coils
+The design specifications for the MechaCar suspension coils are not to have a variance of more than 100 pounds per square inch. Here the question is which manufacturing lots meet that specification. The first image here, shows the total summary statistics for all lots. 
+![image](https://user-images.githubusercontent.com/89048287/145719872-38fb2e5e-1a1d-4e9a-8472-20307d1ba145.png)
+However, here, the summaries of the three lots can be seen inndi
 ![image](https://user-images.githubusercontent.com/89048287/145719461-865ec88f-6038-435b-b29a-a32e2257d800.png)
+
 
 ## T-Tests on Suspension Coilds
 
