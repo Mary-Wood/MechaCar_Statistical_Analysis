@@ -1,0 +1,56 @@
+---
+title: "Challenge_15"
+output: html_document
+---
+
+
+```{r}
+library(dplyr)
+mydata <- read.csv('MechaCar_mpg.csv',stringsAsFactors = F, header = TRUE) #read in dataset
+```
+
+```{r}
+mydata <- data.frame(mydata)
+head(mydata, 4)
+
+```
+```{r}
+names(mydata) <- c("length", "weight", "spoiler", "clearance", "AWD", "mpg")
+head(mydata)
+```
+
+
+```{r}
+
+data <- lm(mpg ~ length + weight + spoiler + clearance + AWD,data=mydata) #generate summary statistics
+summary(data)
+```
+```{r}
+#Deliverable 2
+data2 <- read.csv("Suspension_Coil.csv", header = TRUE, stringsAsFactors = F)
+  
+```
+```{r}
+head(data2,4)
+
+total_summary <- summary(data2$PSI)
+total_summary
+```
+```{r}
+total_summary <- data2 %>% group_by(Manufacturing_Lot) %>%
+  summarise(Mean = mean(PSI), Median = median(PSI), Variance = var(PSI), SD = sd(PSI))
+
+total_summary
+
+```
+```{r}
+#Challenge 3
+Lot1 <- data2 %>% filter(Manufacturing_Lot=="Lot1") #select only data points where the lot is 1
+Lot2 <- data2 %>% filter(Manufacturing_Lot=="Lot2") #select only data points where the lot is 2
+Lot3 <- data2 %>% filter(Manufacturing_Lot=="Lot3") #select only data points where the lot is 3
+t.test(data2$PSI, mu =1500)#This looks at the total PSI when compared to a population mean of 1500 PSI. 
+t.test(Lot1$PSI, mu =1500) #This looks at just the mean of the PSI in lot 1 when compared to pop mean 1500
+t.test(Lot2$PSI, mu =1500) #This looks at just the mean of the PSI in lot 2 when compared to pop mean 1500
+t.test(Lot3$PSI, mu =1500) #This looks at just the mean of the PSI in lot 3 when compared to pop mean 1500
+```
+
