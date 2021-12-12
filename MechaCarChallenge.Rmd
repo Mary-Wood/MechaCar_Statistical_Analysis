@@ -21,7 +21,7 @@ head(mydata)
 
 
 ```{r}
-
+#Deliverable 1
 data <- lm(mpg ~ length + weight + spoiler + clearance + AWD,data=mydata) #generate summary statistics
 summary(data)
 ```
@@ -37,10 +37,10 @@ total_summary <- summary(data2$PSI)
 total_summary
 ```
 ```{r}
-total_summary <- data2 %>% group_by(Manufacturing_Lot) %>%
+lot_summary <- data2 %>% group_by(Manufacturing_Lot) %>%
   summarise(Mean = mean(PSI), Median = median(PSI), Variance = var(PSI), SD = sd(PSI))
 
-total_summary
+lot_summary
 
 ```
 ```{r}
