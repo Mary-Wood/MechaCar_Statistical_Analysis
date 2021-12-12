@@ -9,13 +9,16 @@ The slope of the linear model , shows an adjusted R^2 (being used as this model 
 In general, this model of MechaCar prototypes not predict mpg, although it is clear that length, and clearance are the most predictive variables. The variables of spoiler, AWD, weight r values are not less than .05 and as such would not be considered statitically predictive of mpg. 
 
 ## Summary Statistics on Suspension Coils
-The design specifications for the MechaCar suspension coils are not to have a variance of more than 100 pounds per square inch. Here the question is which manufacturing lots meet that specification. The first image here, shows the total summary statistics for all lots. 
+The design specifications for the MechaCar suspension coils are not to have a variance of more than 100 pounds per square inch. Here the question is which manufacturing lots meet that specification. The first image here, shows the total summary statistics for all lots, showing less than 100s of variance per square inch. 
 ![image](https://user-images.githubusercontent.com/89048287/145719872-38fb2e5e-1a1d-4e9a-8472-20307d1ba145.png)
-However, here, the summaries of the three lots can be seen inndi
+However, here, the summaries of the three lots can be seen, indicating that lot 1 and 2 are under 100 pounds of variable per square inch, while lot 3 is over that range at 170.29 pounds of variance per square inch. 
 ![image](https://user-images.githubusercontent.com/89048287/145719461-865ec88f-6038-435b-b29a-a32e2257d800.png)
 
-
-## T-Tests on Suspension Coilds
+## T-Tests on Suspension Coils
+A T-Test was conducted on all manufacturing lots against the mean PSI of the population (1500). The p value for this test was .06. In general, as the value is not equal to or less than .05, we would determine that the mean may indeed be equal to 1500. 
+![image](https://user-images.githubusercontent.com/89048287/145719943-a0ab8d5a-75a3-4b9d-8eb7-a5898c9ae738.png)
+Three additional T-Tests were then conducted to determine if there was a significant difference from the mean PSIs from each manufacturing lot from the population mean. Lot 1 and 2 were not signigicantly different from the population mean, however lot 3 was. This would continue to support manufacturing issues at Lot 3, due to the extreme variance of the lot and it's variance from the population mean. 
+![image](https://user-images.githubusercontent.com/89048287/145720045-121a2c1f-d5a7-4ddf-b8ba-2856dd9cec86.png)
 
 ## Study Design: MechaCar vs. Competition
 The following hypotheses were defined for this reseach: 
